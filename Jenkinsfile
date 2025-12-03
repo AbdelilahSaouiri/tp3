@@ -4,7 +4,7 @@ pipeline {
     tools {
         maven 'maven'
         jdk 'jdk-21'
-        docker 'docker'
+        dockerTool 'docker'
     }
     environment {
         NEXUS_IP = 'nexus:8081'
