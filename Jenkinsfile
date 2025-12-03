@@ -6,7 +6,6 @@ pipeline {
         jdk 'jdk-21'
         docker 'docker'
     }
-
     environment {
 
         NEXUS_IP = 'nexus:8081'
