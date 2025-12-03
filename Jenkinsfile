@@ -8,7 +8,6 @@ pipeline {
     }
 
     environment {
-
         NEXUS_IP = 'nexus:8081'
         NEXUS_REPO = 'maven-releases'
         GROUP_ID = 'net.ensah'
