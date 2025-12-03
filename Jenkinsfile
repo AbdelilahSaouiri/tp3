@@ -15,7 +15,6 @@ pipeline {
 
         DOCKER_IMAGE_NAME = "mon-app-backend"
     }
-
     stages {
         stage('Checkout') {
             steps {
