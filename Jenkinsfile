@@ -23,7 +23,6 @@ pipeline {
             }
         }
 
-
         stage('Build / Compile') {
             steps {
                 echo 'Compiling code...'
