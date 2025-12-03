@@ -30,7 +30,6 @@ pipeline {
             }
         }
 
-
         stage('Unit Tests') {
             steps {
                 echo 'Running tests...'
