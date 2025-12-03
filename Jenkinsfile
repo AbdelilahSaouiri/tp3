@@ -7,14 +7,19 @@ pipeline {
         dockerTool 'docker'
     }
     environment {
-        NEXUS_IP = 'nexus:8081'
-        NEXUS_REPO = 'maven-releases'
-        GROUP_ID = 'net.ensah'
-        ARTIFACT_ID = 'tp3'
-        VERSION = '1.0.0'
+            NEXUS_IP = 'nexus:8081'
 
-        DOCKER_IMAGE_NAME = "mon-app-backend"
-    }
+
+            NEXUS_REPO = 'maven-snapshots'
+
+            GROUP_ID = 'net.ensah'
+            ARTIFACT_ID = 'tp3'
+
+
+            VERSION = '0.0.1-SNAPSHOT'
+
+            DOCKER_IMAGE_NAME = "mon-app-backend"
+        }
     stages {
         stage('Checkout') {
             steps {
@@ -88,9 +93,9 @@ pipeline {
     }
 
     post {
-        always {
-            cleanWs()
-        }
+//         always {
+//             cleanWs()
+//         }
         success {
             echo 'Pipeline terminé avec succès !'
         }
